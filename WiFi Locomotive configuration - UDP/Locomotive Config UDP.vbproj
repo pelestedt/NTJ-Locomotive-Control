@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{0F77102F-6C4F-4E4A-93C0-A1521FB75CEA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Locomotive_Config_UDP</RootNamespace>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vs\Locomotive configuration\v15\.suo" />
+    <None Include=".vs\Locomotive configuration\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\Locomotive configuration\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\Locomotive configuration\v16\.suo" />
+    <None Include="app.config" />
+    <None Include="Locomotive configuration\App.config" />
+    <None Include="Locomotive configuration\bin\Debug\Locomotive configuration.exe.config" />
+    <None Include="Locomotive configuration\bin\Release\Locomotive configuration.exe.config" />
+    <None Include="Locomotive configuration\bin\Release\Locomotive WiFi configuration.zip" />
+    <None Include="Locomotive configuration\Locomotive configuration.vbproj" />
+    <None Include="Locomotive configuration\My Project\Settings.settings" />
+    <None Include="Locomotive configuration\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Locomotive configuration\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Locomotive configuration\obj\Debug\Locomotive configuration.vbproj.CoreCompileInputs.cache" />
+    <None Include="Locomotive configuration\obj\Debug\Locomotive configuration.vbproj.GenerateResource.cache" />
+    <None Include="Locomotive configuration\obj\Debug\Locomotive configuration.vbprojAssemblyReference.cache" />
+    <None Include="Locomotive configuration\obj\Debug\Locomotive configuration.vbprojResolveAssemblyReference.cache" />
+    <None Include="Locomotive configuration\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Locomotive configuration\obj\Release\Locomotive configuration.vbproj.CoreCompileInputs.cache" />
+    <None Include="Locomotive configuration\obj\Release\Locomotive configuration.vbproj.GenerateResource.cache" />
+    <None Include="Locomotive configuration\obj\Release\Locomotive configuration.vbprojAssemblyReference.cache" />
+    <None Include="Locomotive configuration\obj\Release\Locomotive configuration.vbprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Locomotive configuration\ComClass1.vb" />
+    <Compile Include="Locomotive configuration\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Locomotive configuration\Form1.vb" />
+    <Compile Include="Locomotive configuration\My Project\Application.Designer.vb" />
+    <Compile Include="Locomotive configuration\My Project\AssemblyInfo.vb" />
+    <Compile Include="Locomotive configuration\My Project\Resources.Designer.vb" />
+    <Compile Include="Locomotive configuration\My Project\Settings.Designer.vb" />
+    <Compile Include="Locomotive configuration\obj\Debug\.NETFramework,Version=v4.6.1.AssemblyAttributes.vb" />
+    <Compile Include="Locomotive configuration\obj\Release\.NETFramework,Version=v4.6.1.AssemblyAttributes.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Locomotive configuration\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Locomotive configuration\My Project\Resources.resx" />
+    <EmbeddedResource Include="Locomotive configuration\obj\Debug\Locomotive_configuration.Form1.resources" />
+    <EmbeddedResource Include="Locomotive configuration\obj\Debug\Locomotive_configuration.Resources.resources" />
+    <EmbeddedResource Include="Locomotive configuration\obj\Release\Locomotive_configuration.Form1.resources" />
+    <EmbeddedResource Include="Locomotive configuration\obj\Release\Locomotive_configuration.Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Locomotive configuration\bin\Debug\Locomotive configuration.exe" />
+    <Content Include="Locomotive configuration\bin\Debug\Locomotive configuration.pdb" />
+    <Content Include="Locomotive configuration\bin\Debug\Locomotive configuration.xml" />
+    <Content Include="Locomotive configuration\bin\Release\Locomotive configuration.exe" />
+    <Content Include="Locomotive configuration\bin\Release\Locomotive configuration.pdb" />
+    <Content Include="Locomotive configuration\bin\Release\Locomotive configuration.xml" />
+    <Content Include="Locomotive configuration\My Project\Application.myapp" />
+    <Content Include="Locomotive configuration\obj\Debug\Locomotive configuration.exe" />
+    <Content Include="Locomotive configuration\obj\Debug\Locomotive configuration.pdb" />
+    <Content Include="Locomotive configuration\obj\Debug\Locomotive configuration.vbproj.FileListAbsolute.txt" />
+    <Content Include="Locomotive configuration\obj\Debug\Locomotive configuration.xml" />
+    <Content Include="Locomotive configuration\obj\Debug\TempPE\My Project.Resources.Designer.vb.dll" />
+    <Content Include="Locomotive configuration\obj\Release\Locomotive configuration.exe" />
+    <Content Include="Locomotive configuration\obj\Release\Locomotive configuration.pdb" />
+    <Content Include="Locomotive configuration\obj\Release\Locomotive configuration.vbproj.FileListAbsolute.txt" />
+    <Content Include="Locomotive configuration\obj\Release\Locomotive configuration.xml" />
+    <Content Include="Locomotive configuration\obj\Release\TempPE\My Project.Resources.Designer.vb.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
