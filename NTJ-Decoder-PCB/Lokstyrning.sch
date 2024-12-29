@@ -1,0 +1,472 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Lokstyrning-rescue:R-Device-Lokstyrning-rescue R2
+U 1 1 5ABCC270
+P 6000 1850
+F 0 "R2" V 6080 1850 50  0000 C CNN
+F 1 "3k" V 6000 1850 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5930 1850 50  0001 C CNN
+F 3 "" H 6000 1850 50  0001 C CNN
+	1    6000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Lokstyrning-rescue:R-Device-Lokstyrning-rescue R1
+U 1 1 5ABCC2C1
+P 5650 2100
+F 0 "R1" V 5730 2100 50  0000 C CNN
+F 1 "150R" V 5650 2100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5580 2100 50  0001 C CNN
+F 3 "" H 5650 2100 50  0001 C CNN
+	1    5650 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6000 1700 6000 1650
+Connection ~ 6000 1650
+Wire Wire Line
+	6000 2000 6000 2100
+Wire Wire Line
+	5800 2100 6000 2100
+$Comp
+L Lokstyrning-rescue:Conn_01x08-conn-Lokstyrning-rescue J2
+U 1 1 5ABCC525
+P 7600 4150
+F 0 "J2" H 7600 4550 50  0000 C CNN
+F 1 "Conn_01x08" H 7600 3650 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_SPOX-5267_22-03-5085_08x2.54mm_Straight" H 7600 4150 50  0001 C CNN
+F 3 "" H 7600 4150 50  0001 C CNN
+	1    7600 4150
+	1    0    0    -1  
+$EndComp
+Text GLabel 6800 4050 0    51   Input ~ 0
+D1
+Text GLabel 6800 4150 0    51   Input ~ 0
+D2
+Text GLabel 6800 4250 0    51   Input ~ 0
+D3
+Text GLabel 6800 4350 0    51   Input ~ 0
+D4
+Text GLabel 6800 4450 0    51   Input ~ 0
+GND
+Text GLabel 6800 4550 0    51   Input ~ 0
+5V
+$Comp
+L Lokstyrning-rescue:Conn_01x08-conn-Lokstyrning-rescue J1
+U 1 1 5ABCC6EB
+P 7000 4150
+F 0 "J1" H 7000 4550 50  0000 C CNN
+F 1 "Conn_01x08" H 7000 3650 50  0000 C CNN
+F 2 "Connectors_Molex:Molex_SPOX-5267_22-03-5085_08x2.54mm_Straight" H 7000 4150 50  0001 C CNN
+F 3 "" H 7000 4150 50  0001 C CNN
+	1    7000 4150
+	1    0    0    -1  
+$EndComp
+Text GLabel 7400 3950 0    51   Input ~ 0
+A0
+Text GLabel 7400 4050 0    51   Input ~ 0
+D0
+Text GLabel 7400 4150 0    51   Input ~ 0
+D5
+Text GLabel 7400 4250 0    51   Input ~ 0
+D6
+Text GLabel 7400 4350 0    51   Input ~ 0
+D7
+Text GLabel 7400 4450 0    51   Input ~ 0
+D8
+Text GLabel 7400 4550 0    51   Output ~ 0
+3,3V
+Wire Wire Line
+	7350 3850 7400 3850
+Wire Wire Line
+	6800 3850 6750 3850
+Wire Wire Line
+	6750 3950 6800 3950
+$Comp
+L Lokstyrning-rescue:ULN2803A-Lokstyrning-rescue U1
+U 1 1 5ABCCAE9
+P 4200 3250
+F 0 "U1" H 4200 3775 50  0000 C CNN
+F 1 "ULN2803A" H 4200 3700 50  0000 C CNN
+F 2 "Package_DIP:DIP-18_W7.62mm_LongPads" H 4250 2600 50  0001 L CNN
+F 3 "" H 4300 3150 50  0001 C CNN
+	1    4200 3250
+	1    0    0    -1  
+$EndComp
+Text GLabel 7250 2450 2    51   Input ~ 0
+A0
+Text GLabel 3650 3650 0    51   Input ~ 0
+D1
+Text GLabel 3650 3550 0    51   Input ~ 0
+D2
+Text GLabel 3650 3450 0    51   Input ~ 0
+D3
+Text GLabel 3650 3350 0    51   Input ~ 0
+D4
+Text GLabel 3650 2950 0    51   Input ~ 0
+D5
+Text GLabel 3650 3050 0    51   Input ~ 0
+D6
+Text GLabel 3650 3150 0    51   Input ~ 0
+D7
+Text GLabel 3650 3250 0    51   Input ~ 0
+D8
+Text GLabel 4200 4100 3    51   Input ~ 0
+GND
+Wire Wire Line
+	3650 2950 3800 2950
+Wire Wire Line
+	3650 3050 3800 3050
+Wire Wire Line
+	3650 3150 3800 3150
+Wire Wire Line
+	3650 3250 3800 3250
+Wire Wire Line
+	3650 3350 3800 3350
+Wire Wire Line
+	3650 3450 3800 3450
+Wire Wire Line
+	3650 3550 3800 3550
+Wire Wire Line
+	3650 3650 3800 3650
+Wire Wire Line
+	4200 3950 4200 4100
+Wire Wire Line
+	4600 3750 4750 3750
+Text GLabel 4750 3150 2    51   Input ~ 0
+OUT3
+Text GLabel 4750 3250 2    51   Input ~ 0
+OUT4
+Text GLabel 4750 3350 2    51   Input ~ 0
+OUT5
+Text GLabel 4750 3450 2    51   Input ~ 0
+OUT6
+Text GLabel 4750 3550 2    51   Input ~ 0
+OUT7
+Text GLabel 4750 3650 2    51   Input ~ 0
+OUT8
+Wire Wire Line
+	4750 3150 4600 3150
+Wire Wire Line
+	4600 3250 4750 3250
+Wire Wire Line
+	4750 3350 4600 3350
+Wire Wire Line
+	4600 3450 4750 3450
+Wire Wire Line
+	4750 3550 4600 3550
+Wire Wire Line
+	4600 3650 4750 3650
+$Comp
+L Lokstyrning-rescue:LM7805_TO220-regul-Lokstyrning-rescue U2
+U 1 1 5ABCD407
+P 7500 1650
+F 0 "U2" H 7350 1775 50  0000 C CNN
+F 1 "LM7805_TO220" H 7500 1775 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 7500 1875 50  0001 C CIN
+F 3 "" H 7500 1600 50  0001 C CNN
+	1    7500 1650
+	1    0    0    -1  
+$EndComp
+Text GLabel 7500 2050 3    51   Input ~ 0
+GND
+Wire Wire Line
+	7500 1950 7500 2000
+Text GLabel 4100 1650 0    51   Output ~ 0
+GND
+Wire Wire Line
+	4350 1650 4100 1650
+$Comp
+L Lokstyrning-rescue:POT-Lokstyrning-rescue RV1
+U 1 1 5ABCD511
+P 6950 2450
+F 0 "RV1" V 6775 2450 50  0000 C CNN
+F 1 "POT" V 6850 2450 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_ACP_CA14h5_Vertical_Px5.0mm_Py10.0mm" H 6950 2450 50  0001 C CNN
+F 3 "" H 6950 2450 50  0001 C CNN
+	1    6950 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2450 7100 2450
+Text GLabel 6950 2750 3    51   Input ~ 0
+GND
+Wire Wire Line
+	6950 2600 6950 2750
+Text GLabel 7950 1650 2    51   Output ~ 0
+5V
+Wire Wire Line
+	7950 1650 7850 1650
+Text GLabel 8350 2250 0    51   Input ~ 0
+OUT2
+Wire Wire Line
+	8350 2250 8500 2250
+Text GLabel 9350 2250 2    51   Input ~ 0
+5V
+Wire Wire Line
+	9350 2250 9100 2250
+Text GLabel 8350 3050 0    51   Input ~ 0
+GND
+Wire Wire Line
+	8500 3050 8350 3050
+Wire Wire Line
+	7950 2300 7950 2650
+Wire Wire Line
+	7950 2650 8500 2650
+Wire Wire Line
+	9100 2550 9500 2550
+Wire Wire Line
+	9100 2750 9350 2750
+Wire Wire Line
+	9350 2750 9350 2800
+Wire Wire Line
+	9500 2550 9500 2700
+Wire Wire Line
+	9500 3150 9100 3150
+Text GLabel 9400 4550 0    51   Input ~ 0
+D0
+Text GLabel 10350 3950 0    51   Input ~ 0
+OUT3
+Text GLabel 10350 4050 0    51   Input ~ 0
+OUT4
+Text GLabel 10350 4150 0    51   Input ~ 0
+OUT5
+Text GLabel 10350 4250 0    51   Input ~ 0
+OUT6
+Text GLabel 10350 4350 0    51   Input ~ 0
+OUT7
+Text GLabel 10350 4450 0    51   Input ~ 0
+OUT8
+NoConn ~ 7350 3850
+NoConn ~ 6750 3850
+Wire Wire Line
+	7850 1700 7850 1650
+Connection ~ 7850 1650
+Wire Wire Line
+	7000 2000 7500 2000
+Wire Wire Line
+	7000 1650 7000 1700
+Connection ~ 7000 1650
+Connection ~ 7500 2000
+NoConn ~ 6750 3950
+Text GLabel 5200 1650 2    60   Output ~ 0
+VCC
+Wire Wire Line
+	5200 1650 4950 1650
+Text GLabel 5900 1650 0    60   Input ~ 0
+VCC
+Wire Wire Line
+	5900 1650 6000 1650
+Wire Wire Line
+	5200 2100 5500 2100
+Wire Wire Line
+	5200 2950 5200 2100
+Wire Wire Line
+	4600 2950 5200 2950
+Text GLabel 4750 3050 2    51   Input ~ 0
+OUT2
+Wire Wire Line
+	4750 3050 4600 3050
+$Comp
+L Lokstyrning-rescue:CP-Device-Lokstyrning-rescue C1
+U 1 1 5BB35120
+P 7000 1850
+F 0 "C1" H 7025 1950 50  0000 L CNN
+F 1 "330u" H 7025 1750 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 7038 1700 50  0001 C CNN
+F 3 "" H 7000 1850 50  0001 C CNN
+	1    7000 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Lokstyrning-rescue:CP-Device-Lokstyrning-rescue C2
+U 1 1 5BB3516E
+P 7850 1850
+F 0 "C2" H 7875 1950 50  0000 L CNN
+F 1 "330u" H 7875 1750 50  0000 L CNN
+F 2 "Capacitors_THT:CP_Radial_D8.0mm_P5.00mm" H 7888 1700 50  0001 C CNN
+F 3 "" H 7850 1850 50  0001 C CNN
+	1    7850 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 10350 3750 0    51   Input ~ 0
+5V
+$Comp
+L Diode_Bridge:KBU4B DB1
+U 1 1 5BB366FA
+P 4650 1650
+F 0 "DB1" H 4750 1925 50  0000 L CNN
+F 1 "KBU4B" H 4750 1850 50  0000 L CNN
+F 2 "Diode_THT:Diode_Bridge_Vishay_KBU" H 4800 1775 50  0001 L CNN
+F 3 "" H 4650 1650 50  0001 C CNN
+	1    4650 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Lokstyrning-rescue:G5V-2-Relay2-Lokstyrning-rescue K1
+U 1 1 5BB3788E
+P 8800 2650
+F 0 "K1" H 9450 2800 50  0000 L CNN
+F 1 "DS2Y-S-5vdc" H 9450 2700 50  0000 L CNN
+F 2 ".pretty:Relay_SPST_OMRON-G5Q" H 9450 2600 50  0001 L CNN
+F 3 "" H 8600 2650 50  0001 C CNN
+	1    8800 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 2300 7950 2300
+Wire Wire Line
+	9350 2950 9100 2950
+Wire Wire Line
+	7850 1650 7800 1650
+Wire Wire Line
+	7000 1650 7200 1650
+Wire Wire Line
+	7500 2000 7500 2050
+Wire Wire Line
+	7500 2000 7850 2000
+Text Notes 600  5300 0    197  ~ 0
+D0     16    Reed input
+Wire Bus Line
+	600  4650 3600 4650
+Text Notes 600  5600 0    197  ~ 0
+D1     5     I/O 6
+Text Notes 600  5900 0    197  ~ 0
+D2     4     I/O 5
+Text Notes 600  5000 0    197  ~ 0
+A0     A0    Speed feedback
+Text Notes 600  4650 0    197  ~ 0
+WiFi   GPIO  Use
+Text Notes 600  6200 0    197  ~ 0
+D3     0     I/O 4
+Text Notes 600  6500 0    197  ~ 0
+D4     2     I/O 3
+Text Notes 600  6800 0    197  ~ 0
+D5     14    PWM out
+Text Notes 600  7100 0    197  ~ 0
+D6     12    Dir Relay
+Text Notes 600  7400 0    197  ~ 0
+D7     13    I/O 1
+Text Notes 600  7700 0    197  ~ 0
+D8     15    I/O 2
+Text Notes 7400 7550 0    118  ~ 0
+Styrkort WeMos WiFi mini Lokstyrning
+Text Notes 8300 7650 0    79   ~ 0
+2020-11-14
+Text Notes 10650 7650 0    79   ~ 0
+2.0
+Text Notes 10750 4550 2    59   ~ 0
+U1\nU2\nU3\nU4\nU5\nU6\nI1
+Text Notes 10650 3900 0    59   ~ 0
+VCC\nV+\nV-\n5VDC\nGND
+NoConn ~ 4750 3750
+Text GLabel 10350 3850 0    51   Input ~ 0
+GND
+Text GLabel 10350 3450 0    60   Input ~ 0
+VCC
+$Comp
+L Lokstyrning-rescue:Screw_Terminal_01x02-conn-Lokstyrning-rescue J4
+U 1 1 5E21E18E
+P 9750 2700
+F 0 "J4" H 9830 2692 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 9750 2900 50  0000 L CNN
+F 2 "Connectors_WAGO:WAGO_734_2pin_Straight_RuggedPads" H 9750 2700 50  0001 C CNN
+F 3 "~" H 9750 2700 50  0001 C CNN
+	1    9750 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Lokstyrning-rescue:Screw_Terminal_01x12-conn-Lokstyrning-rescue J3
+U 1 1 5E21E227
+P 10550 3950
+F 0 "J3" H 10500 4600 50  0000 L CNN
+F 1 "Screw_Terminal_01x12" H 10050 4700 50  0000 L CNN
+F 2 "Connectors_WAGO:WAGO_734_12Pin_Straight_RuggedPads" H 10550 3950 50  0001 C CNN
+F 3 "~" H 10550 3950 50  0001 C CNN
+	1    10550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 2800 9550 2800
+Connection ~ 9350 2800
+Wire Wire Line
+	9350 2800 9350 2950
+Wire Wire Line
+	9550 2700 9500 2700
+Connection ~ 9500 2700
+Wire Wire Line
+	9500 2700 9500 3150
+Text Notes 10100 2850 0    59   ~ 0
+Motor\nMotor
+Text GLabel 10350 3550 0    51   Output ~ 0
+V+
+Text GLabel 10350 3650 0    51   Output ~ 0
+V-
+Text GLabel 4650 1950 3    51   Input ~ 0
+V+
+Text GLabel 4650 1350 1    51   Input ~ 0
+V-
+$Comp
+L Lokstyrning-rescue:Q_PMOS_GDS-device Q1
+U 1 1 5FAFC1DB
+P 6200 2100
+F 0 "Q1" H 6406 2146 50  0000 L CNN
+F 1 "FQPF11P06" H 6406 2055 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Vertical" H 6400 2200 50  0001 C CNN
+F 3 "~" H 6200 2100 50  0001 C CNN
+	1    6200 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 1650 7000 1650
+Connection ~ 6000 2100
+Text GLabel 6300 2300 3    60   Input ~ 0
+VCC
+Wire Wire Line
+	6950 2300 6950 2050
+Wire Wire Line
+	6950 2050 6650 2050
+Wire Wire Line
+	6650 2050 6650 1900
+Wire Wire Line
+	6650 1900 6300 1900
+Connection ~ 6950 2300
+$Comp
+L Lokstyrning-rescue:R-Device-Lokstyrning-rescue R3
+U 1 1 5FAFE27F
+P 9550 4400
+F 0 "R3" V 9630 4400 50  0000 C CNN
+F 1 "10k" V 9550 4400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9480 4400 50  0001 C CNN
+F 3 "" H 9550 4400 50  0001 C CNN
+	1    9550 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 4550 9550 4550
+Wire Wire Line
+	9550 4550 10350 4550
+Connection ~ 9550 4550
+Text GLabel 9250 4150 0    51   Input ~ 0
+3,3V
+Wire Wire Line
+	9250 4150 9550 4150
+Wire Wire Line
+	9550 4150 9550 4250
+Text Notes 7050 7100 0    118  ~ 0
+v2.0 Changed output switch to Pchannel FET
+$EndSCHEMATC
