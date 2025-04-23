@@ -59,7 +59,7 @@ WiFiUDP Udp;
 byte acceleration_time = 10; // FSet the time in seconds it should take for the locomotive to accelerate from standstill to full speed
 byte deceleration_time = 10; //Set the time in seconds it should take for the locomotive to stop from full speed
 int pwmfrq = 300;
-int zero_speed = 200; //Set the PWM value where the locomotive, without load,starts to move
+int zero_speed = 10; //Set the PWM value where the locomotive, without load,starts to move
 int fullspeed = 100;
 int slowspeed = 75;
 int halfspeed = 50;
@@ -88,7 +88,7 @@ float desired_speed = 0;
 float current_PWM = 0;
 float read_speed = 0;
 float reglerfaktor = 40;
-int fixedpwm=50;
+//int fixedpwm=50;
 
 //50ms declarations
 byte NSphase = 0;

@@ -1,11 +1,13 @@
 void getUDPdata() {
   // if there's data available, read a packet
-  int packetSize = Udp.parsePacket();
+    int packetSize = Udp.parsePacket();
   if (packetSize) {
     // read the packet into packetBufffer
     int n = Udp.read(packetBuffer, 20);
     packetBuffer[n] = 0;
     // Kolla om det är ett giltigt meddelande, dvs första tecknet=="I"
+//int("packetBuffer ");
+//intln(packetBuffer);
 
     char inledning = packetBuffer[0];
     String Inledning(inledning);
@@ -33,6 +35,7 @@ void getUDPdata() {
           param1 = param1 + packetBuffer[t];
           t++;
         }
+        //int(ordertyp);
         //om hastighetsmeddelande
         if (ordertyp == "H") {                                 // separear ut hastighet, riktning och meddelandeid
           if (0 == NSphase && 0 == NSRphase && Pphase == 0) {  //ändra bara om inte i automatkörning
@@ -52,8 +55,8 @@ void getUDPdata() {
               Seq = Seq + packetBuffer[t];
               t++;
             }
-            Serial.print("mottaget seq ");
-            Serial.print(Seq);
+            //int("mottaget seq ");
+            //int(Seq);
           }
         }                       //slut hanterat ordertyp H
         if (ordertyp == "F") {  //om Funktionsmeddelande
@@ -74,13 +77,13 @@ void getUDPdata() {
             }
             byte d = 0;
           }  //slut hanterat funktionstangenter om ändrat
-          Serial.print("mottaget seq ");
-          Serial.print(Seq);
+          //int("mottaget seq ");
+          //int(Seq);
         }  //slut hantering ordertyp F
            //Skicka Ack på mottaget meddelande
         int answer = Seq.toInt();
-        Serial.print("  returnerat seq ");
-        Serial.println(answer);
+        //int("  returnerat seq ");
+        //intln(answer);
         Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
         Udp.print(answer);
         Udp.endPacket();

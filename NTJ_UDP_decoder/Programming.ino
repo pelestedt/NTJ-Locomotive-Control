@@ -63,9 +63,9 @@ void Programming() {
       read_speed = read_speed + analogRead(A0);
       read_speed = read_speed / 2;
       analogWrite(PWM, testfart);
-      Serial.print(100 + (10 * i));
-      Serial.println(" / ");
-      Serial.println(read_speed);
+      //int(100 + (10 * i));
+      //intln(" / ");
+      //intln(read_speed);
       if (read_speed > maxa) {
         maxa = read_speed;
         optfrq = 100 + (10 * i);

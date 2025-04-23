@@ -22,6 +22,7 @@ int minvolt=v1;
 if(v2<v1)minvolt=v2;
 if(v3<minvolt)minvolt=v3;
 read_speed=v1+v2+v3-maxvolt-minvolt;
+Serial.print(read_speed);Serial.print(" / ");Serial.println(current_PWM);
 
 /*read_speed=analogRead(A0);
 read_speed=read_speed +analogRead(A0);
@@ -55,7 +56,7 @@ if(EMS==false)analogWrite(PWM,int(current_PWM));
   current_PWM = current_PWM +(kp * error)+ ITerm - (kd * dInput);
   if (current_PWM > 1023) current_PWM = 1023;
   else if (current_PWM < 0) current_PWM = 0;
-
+current_PWM = 20;
   //*Remember some variables for next time
   lastInput = read_speed;
 
@@ -76,13 +77,16 @@ if(desired_speed<read_speed)current_PWM=current_PWM-1;
 //if(desired_speed>read_speed){current_PWM=current_PWM+1; }
 //if(desired_speed<read_speed)current_PWM=current_PWM-1;
 
-if(desired_speed>0 && current_PWM<100)current_PWM=100;
+if(desired_speed>0 && current_PWM<100)current_PWM=40;
 if(current_PWM>1023)current_PWM=1023;
 if(desired_speed==0)current_PWM=0; 
 //do not turn motor on if EMS, emergency stop, is active
-//if(desired_speed>0){Serial.print(desired_speed);Serial.print(",");Serial.print(read_speed);Serial.print(",");Serial.println(current_PWM);}
+//if(desired_speed>0){//int(desired_speed);//int(",");//int(read_speed);//int(",");//intln(current_PWM);}
   
 if(EMS==false)analogWrite(PWM,int(current_PWM));
+
+
+
 //if(EMS==true)analogWrite(PWM,0);
 //if(EMS==true)set_speed = 0;
 }

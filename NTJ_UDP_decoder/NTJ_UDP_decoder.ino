@@ -44,13 +44,14 @@ WiFiClient client;
 
 void setup() {
   Serial.begin(115200);
+  //intln("");
   EEPROM.begin(512);
   Getsettings();
-  OTAsetup();
+ 
   String HostID = "Lok" + String(myID);  //create Hostname from read ID
   WiFi.setHostname(HostID.c_str());
   ArduinoOTA.setHostname(HostID.c_str());
-
+ //OTAsetup();
   WiFi.mode(WIFI_STA);
   //SSID och Password till lokala nätverket, anslut
   STASSID = ssid;
@@ -85,6 +86,8 @@ void setup() {
     else APmode();*/
 
   analogWriteFreq(pwmfrq);
+  analogWriteFreq(1000);
+
   //analogWriteFreq(10000);
   WiFi.setOutputPower(20.5);  // this sets wifi to highest power
   //Set PID parameters
@@ -97,17 +100,17 @@ void setup() {
   long starttid = millis();
   while (WiFi.status() != WL_CONNECTED) {
     delay(100);
-    Serial.print(".");
+    //int(".");
   }
-  Serial.println(".");
-  Serial.println("NTJ DDC-TCP Locomotive control ver " + ver);
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
+  //intln(".");
+  //intln("NTJ DDC-UDP Locomotive control ver " + ver);
+  //int("IP address: ");
+  //intln(WiFi.localIP());
   Udp.begin(localPort);
   server.begin();
   MDNS.begin(HostID.c_str());
-  Serial.print("Namn: ");
-  Serial.println(HostID.c_str());
+  //int("Namn: ");
+  //intln(HostID.c_str());
 }
 
 void loop() {
@@ -119,12 +122,12 @@ void loop() {
   }
   if (server.hasClient()) {
     client = server.accept();
-    Serial.println("New client");
+    //intln("New client");
   }
   //client.println("Anslutning windows");
   if (client.available()) {
     Data = client.readString();
-    if (Data.length() > 0) Serial.println(Data);
+    if (Data.length() > 0) //intln(Data);
     client.flush();
     Programming();
   }

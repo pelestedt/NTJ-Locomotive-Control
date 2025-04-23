@@ -4,10 +4,10 @@ void every1000ms()
   // code to be repeated every 1000ms (every second)
   //Increment time the smoke generator has been on and turn it off after timeout
 /*
-Serial.print(current_PWM);Serial.print("  ");
-Serial.print(read_speed);Serial.print(" error= ");
-Serial.print(error);Serial.print("  ");Serial.print(kp*error);
-Serial.print(" ki= ");Serial.println(int(ki*1000));
+//int(current_PWM);//int("  ");
+//int(read_speed);//int(" error= ");
+//int(error);//int("  ");//int(kp*error);
+//int(" ki= ");//intln(int(ki*1000));
 */
  
   //Check that a time > 0 is set
