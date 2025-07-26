@@ -1,5 +1,4 @@
 void Programming() {
-
   //check if clientdata starts with "Getconfig"
   if (Data.startsWith("Getconfig")) {
     sendConfiguration();
@@ -27,11 +26,10 @@ void Programming() {
       read_speed = analogRead(A0);
       read_speed = read_speed + analogRead(A0);
       read_speed = read_speed / 2;
+p = p - 1;
       analogWrite(PWM, p);
-      p = p - 1;
-      if (read_speed < 1) {
-        analogWrite(PWM, 0);
-        //When motor stops to turn, store the value in the zero_speed variable
+      if(read_speed<1){
+            //When motor stops to turn, store the value in the zero_speed variable
         //write  2 byte zero_speed
         EEPROM.write(72, highByte(p));
         EEPROM.write(73, lowByte(p));
@@ -64,8 +62,8 @@ void Programming() {
       read_speed = read_speed / 2;
       analogWrite(PWM, testfart);
       //int(100 + (10 * i));
-      //intln(" / ");
-      //intln(read_speed);
+      //Serial.println(" / ");
+      //Serial.println(read_speed);
       if (read_speed > maxa) {
         maxa = read_speed;
         optfrq = 100 + (10 * i);

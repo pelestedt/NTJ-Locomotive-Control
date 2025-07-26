@@ -1,7 +1,7 @@
 void writeConfiguration() {
   int wait = 1;
   int mem = 0;
-
+EEPROM.write(511, 123);
 //Delete up to and including firt $
 byte fpos = Configstring.indexOf('$');
 int msglength= Configstring.length();

@@ -6,8 +6,8 @@ void getUDPdata() {
     int n = Udp.read(packetBuffer, 20);
     packetBuffer[n] = 0;
     // Kolla om det är ett giltigt meddelande, dvs första tecknet=="I"
-//int("packetBuffer ");
-//intln(packetBuffer);
+Serial.print("packetBuffer ");
+Serial.println(packetBuffer);
 
     char inledning = packetBuffer[0];
     String Inledning(inledning);
@@ -55,7 +55,7 @@ void getUDPdata() {
               Seq = Seq + packetBuffer[t];
               t++;
             }
-            //int("mottaget seq ");
+            //Serial.print("mottaget seq ");
             //int(Seq);
           }
         }                       //slut hanterat ordertyp H
@@ -77,13 +77,13 @@ void getUDPdata() {
             }
             byte d = 0;
           }  //slut hanterat funktionstangenter om ändrat
-          //int("mottaget seq ");
+          //Serial.print("mottaget seq ");
           //int(Seq);
         }  //slut hantering ordertyp F
            //Skicka Ack på mottaget meddelande
         int answer = Seq.toInt();
-        //int("  returnerat seq ");
-        //intln(answer);
+        //Serial.print("  returnerat seq ");
+        //Serial.println(answer);
         Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
         Udp.print(answer);
         Udp.endPacket();

@@ -18,6 +18,7 @@ void every50ms()
 //Acceleratin, change current_speed towards set_speed if current_speed < set_speed (accelerate)
 if(desired_speed<set_speed){
 desired_speed=desired_speed+(1024/(acceleration_time*20));
+
 //Also handle if the speed value is close to correct to avoid osscilation
 if(abs(set_speed-desired_speed)<= (1024/(acceleration_time*20))) desired_speed=set_speed;
 }
@@ -28,7 +29,7 @@ if(desired_speed>set_speed){
 if(abs(set_speed-desired_speed)<= (1024/(acceleration_time*20))) desired_speed=set_speed;  
   }
 
-// //int(throttle_speed);//int(" / ");//int(set_speed);//int(" / ");//intln(desired_speed);
+// //int(throttle_speed);//Serial.print(" / ");//int(set_speed);//Serial.print(" / ");//Serial.println(desired_speed);
 
 
 
@@ -84,7 +85,7 @@ if(18==NSphase && HIGH==digitalRead(IN)){throttle_speed=0; NEXTSTATION=false; NS
 }//End of Nextstation
 
 //Handle Function key 11 going to next station on digital input
-//int("NEXTSTATION==");//intln(NEXTSTATION);
+//Serial.print("NEXTSTATION==");//Serial.println(NEXTSTATION);
 if(NEXTSTATIONREMOTE==true){
 //Wait for digital input to be set
 if (LOW==digitalRead(IN) && 0 == NSRphase){NSRphase=1;} //Wait for digital input to be set

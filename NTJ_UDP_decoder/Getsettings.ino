@@ -1,91 +1,93 @@
 void Getsettings(){
-//intln("");
-//intln("Skriver ut EEprominst");
+ // Serial.println("Getsettings");
+//Serial.println("");
+//Serial.println("Skriver ut EEprominst");
 //SSID 10 bytes 0-9
    ssid="";
    for (int mem=0; mem<10; mem++){ ssid += char(EEPROM.read(mem));}
-   ssid.trim();
-//int("ssid "); //intln(ssid);
+  ssid.trim();
+//Serial.print("ssid "); Serial.println(ssid);
 
 //Loconame 20 bytes 10-29
 loco_name="";
 for (int mem=10; mem<30; mem++){ loco_name += char(EEPROM.read(mem));}
-//int("loco_name "); //intln(loco_name);
+//Serial.print("loco_name "); Serial.println(loco_name);
+
 myID=loco_name.toInt();
 
 //Password 10 bytes 30-39
 password="";
 for (int mem=30; mem<40; mem++){ password += char(EEPROM.read(mem));}
 password.trim();
-//int("password "); //intln(password);
+//Serial.print("password "); //Serial.println(password);
 
 //PWM frequency 2 bytes 70-71
 pwmfrq=(256*EEPROM.read(70))+EEPROM.read(71);
-//int("pwmfrq "); //intln(pwmfrq);
+//Serial.print("pwmfrq "); //Serial.println(pwmfrq);
 
 //Zero_speed 2 bytes
 zero_speed=(256*EEPROM.read(72))+EEPROM.read(73);
-//int("zero_speed "); //intln(zero_speed);
+//Serial.print("zero_speed "); //Serial.println(zero_speed);
 
  //write  1 byte acceleration_time, 
 acceleration_time=EEPROM.read(74);
-//int("acceleration_time "); //intln(acceleration_time);
+//Serial.print("acceleration_time "); //Serial.println(acceleration_time);
 
 //write  1 byte deceleration_time,
 deceleration_time=EEPROM.read(75);
-//int("deceleration_time "); //intln(deceleration_time); 
+//Serial.print("deceleration_time "); //Serial.println(deceleration_time); 
 
 //write  1 byte fullspeed
-fullspeed=EEPROM.read(76);
-//int("fullspeed "); //intln(fullspeed);
+fullspeed=EEPROM.read(76)*10;
+//Serial.print("fullspeed "); //Serial.println(fullspeed);
   
   //write  1 byte slowspeed
-slowspeed=EEPROM.read(77);
-//int("slowspeed "); //intln(slowspeed);
+slowspeed=EEPROM.read(77)*10;
+//Serial.print("slowspeed "); //Serial.println(slowspeed);
  
   //write  1 byte halfspeed
-halfspeed=EEPROM.read(78);
-//int("halfspeed "); //intln(halfspeed);
+halfspeed=EEPROM.read(78)*10;
+//Serial.print("halfspeed "); //Serial.println(halfspeed);
 
   //write  1 byte Shuntingspeed
 Shuntingspeed=EEPROM.read(79);
-//int("Shuntingspeed "); //intln(Shuntingspeed);
+//Serial.print("Shuntingspeed "); //Serial.println(Shuntingspeed);
   
   //write  1 byte startwhistle
 startwhistle=EEPROM.read(80);
-//int("startwhistle "); //intln(startwhistle);
+//Serial.print("startwhistle "); //Serial.println(startwhistle);
 
   
   //write  1 byte approachwhistle
 approachwhistle=EEPROM.read(81);
-//int("approachwhistle "); //intln(approachwhistle);
+//Serial.print("approachwhistle "); //Serial.println(approachwhistle);
   
   //write  1 byte max_pulserate
 max_pulserate =EEPROM.read(82);
-//int("max_pulserate "); //intln(max_pulserate);
+//Serial.print("max_pulserate "); //Serial.println(max_pulserate);
   
   //write  1 byte min_pulserate
 min_pulserate=EEPROM.read(83);
-//int("min_pulserate "); //intln(min_pulserate);
+//Serial.print("min_pulserate "); //Serial.println(min_pulserate);
   
   //write  1 byte pulselength
 pulselength=EEPROM.read(84);
-//int("pulselength "); //intln(pulselength);
+//Serial.print("pulselength "); //Serial.println(pulselength);
   
  //Smoketime
 smoke_timer =EEPROM.read(85);
-//int("smoke_timer "); //intln(smoke_timer);
+//Serial.print("smoke_timer "); //Serial.println(smoke_timer);
  
 //creepspeed
 creepspeed=EEPROM.read(86);
-//int("creepspeed "); //intln(creepspeed);
+//Serial.print("creepspeed "); //Serial.println(creepspeed);
 
 //mindwell
 mindwell=EEPROM.read(87);
-//int("mindwell "); //intln(mindwell);
+//Serial.print("mindwell "); //Serial.println(mindwell);
 
 //maxdwell 
 maxdwell=EEPROM.read(88);
-//int("maxdwell "); //intln(maxdwell);
+//Serial.print("maxdwell "); //Serial.println(maxdwell);
 
 }// Slut Getsettings

@@ -12,7 +12,7 @@
   2024-08-19   ver 3.0 Change configuration from AT mode to webserver
 
 */
-const String ver = "3.0";
+const String ver = "3.1";
 /*
 
    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
@@ -43,21 +43,27 @@ WiFiServer server(23);
 WiFiClient client;
 
 void setup() {
-  Serial.begin(115200);
-  //intln("");
+  Serial.begin(115200);  
+ //Serial.println(F(""));
+  // Serial.println(F("Start"));
   EEPROM.begin(512);
+ // Serial.println(EEPROM.read(511));
+  if(EEPROM.read(511)==123){    //check if there is a configuration done and if so read from EEprom
   Getsettings();
- 
+  STASSID = ssid;
+  STAPSK = password;
+  }
   String HostID = "Lok" + String(myID);  //create Hostname from read ID
   WiFi.setHostname(HostID.c_str());
   ArduinoOTA.setHostname(HostID.c_str());
- //OTAsetup();
+
   WiFi.mode(WIFI_STA);
   //SSID och Password till lokala nätverket, anslut
-  STASSID = ssid;
-  STAPSK = password;
+  
   WiFi.begin(STASSID, STAPSK);
-
+  //Serial.println("Call OTAsetup");
+  OTAsetup();
+  //Serial.println("OTAsetup done");
   //Initialize I/O
   pinMode(PWM, OUTPUT);
   pinMode(DIR, OUTPUT);
@@ -75,20 +81,10 @@ void setup() {
   pinMode(OUT6, OUTPUT);
   digitalWrite(OUT6, LOW);
   pinMode(IN, INPUT_PULLUP);
-
-  //check if there is a configuration done and if so read from EEprom
-
-
-
-
-  //WiFi.setHostname(namn.c_str());
-  /*
-    else APmode();*/
-
+ 
   analogWriteFreq(pwmfrq);
-  analogWriteFreq(1000);
-
-  //analogWriteFreq(10000);
+  //analogWriteFreq(1000);
+ 
   WiFi.setOutputPower(20.5);  // this sets wifi to highest power
   //Set PID parameters
   //SetTunings(double Kp, double Ki, double Kd)
@@ -100,35 +96,39 @@ void setup() {
   long starttid = millis();
   while (WiFi.status() != WL_CONNECTED) {
     delay(100);
-    //int(".");
+    //Serial.print(".");
   }
-  //intln(".");
-  //intln("NTJ DDC-UDP Locomotive control ver " + ver);
-  //int("IP address: ");
-  //intln(WiFi.localIP());
+  //Serial.println(".");
+   //Serial.println(F(""));
+  //Serial.print(F("NTJ DDC-UDP Locomotive control ver "));
+  //Serial.println(ver);
+  //Serial.println(F("IP address: "));
+  //Serial.println(WiFi.localIP());
+  //Serial.println(HostID);
   Udp.begin(localPort);
   server.begin();
   MDNS.begin(HostID.c_str());
-  //int("Namn: ");
-  //intln(HostID.c_str());
+  Serial.print("");
+  Serial.print("Namn: ");
+  Serial.println(HostID.c_str());
 }
 
 void loop() {
-  MDNS.update();
+ // MDNS.update();
   //Check for software update only at standstill
-  if (0 == current_PWM) {
-    //MDNS.update();
+   if (0 == current_PWM) {
+    MDNS.update();
     ArduinoOTA.handle();
   }
   if (server.hasClient()) {
     client = server.accept();
-    //intln("New client");
+    //Serial.println("New client");
   }
   //client.println("Anslutning windows");
   if (client.available()) {
     Data = client.readString();
-    if (Data.length() > 0) //intln(Data);
-    client.flush();
+    if (Data.length() > 0)  //Serial.println(Data);
+      client.flush();
     Programming();
   }
 

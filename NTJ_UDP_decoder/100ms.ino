@@ -41,7 +41,7 @@ void every100ms()
     NSphase = 0;
     NSRphase = 0;
     set_speed = 0;
-    //intln("Emergency stop sets speed to zero");
+    //Serial.println("Emergency stop sets speed to zero");
   }
 
   if (FunctionKey[8] == false && set_speed == 0 && EMS_stopped == true && throttle_speed == 0) {

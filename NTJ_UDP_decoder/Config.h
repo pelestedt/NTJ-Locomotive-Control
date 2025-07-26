@@ -39,11 +39,11 @@ long lastprint=0;
 
 //getUDPdata declarations
 
-String STASSID = "NTJ1";
+String STASSID = "NTJ";
 String STAPSK =  "NTJNTJ01";
 int packetSize=0;
 
-int myID = 111;
+int myID = 999;
 String Seq;
 
 unsigned int localPort = 8888;      // local port to listen on
